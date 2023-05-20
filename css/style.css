@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root{  /* Estas variables con llamas customizar propiedades y root es un seudoclase aqui se puede acceder a estos elementos */
+    --padding-container: 6.25rem 0;
+    --color-title: #001A49;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    width: 90%;
+    max-width: 75rem;
+    margin: 0 auto;
+    overflow: hidden; /* esto es para que se escondan los elementos*/ 
+    padding: var(--padding-container); /*esto es la forma de usar el root*/
+}
+.hero{
+    width: 100%;
+    height: 100vh;
+    min-height: 37.5rem;
+    max-height: 50rem;
+    position: relative; /*para que los elementos se posicionen permanentemente en el contenedor*/
+    display: grid; /*se quiere crear dos filas*/
+    grid-template-rows: 6.25rem 1fr; /*aqui el 1fr tomara el contenido que sobra de los 100px*/
+    color: #fff;
+}
+
+.hero::before{ /*esto es un seudo elemento*/
+    content: "";
+    position: absolute; /*Aqui se posiciona absolutamente al padre que es  Hero*/
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(180deg, #0000008c 0%, #0000008c 100%), url(../image/tablePC.jpg);/*el l-g no es un degradado le da una transparencia a la imagen que esta dentro de un url*/
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 95%, 0 80%);
+    z-index: -1; /*antes no aparecia las letras esto lo arregla*/
+}
+
+/*NAV*/
+
+.nav{
+    --padding-container:0; /*esto hace que solamente el root lo contenga el header y nav*/
+    height: 6.25rem;
+    display: flex;
+    align-items: center;
+}
+
+.nav__title{
+    font-weight: 300; /*aqui se usa el poppins 300*/
+
+}
+
+.nav__items{
+    list-style: none;
+}
+
+.nav__link{
+    margin-left: auto;
+    padding: 0;
+    display: grid;
+    grid-auto-flow: column; /*esto es el flujo de las columnas, para que dirección van*/
+    grid-auto-columns: max-content;
+    gap: 2em; /*son los espacios que hay entre las palabras de la nav*/
+}
+
+.nav__links{
+    color:#fff;
+    text-decoration: none;
+}
+
+.nav__menu{     /*este el el padre de nav__img*/
+    margin-left: auto;
+    cursor: pointer; /* cada vez que se pasa el cursor se transforma en una manito*/
+    display: none; /*no se vera hasta que se este en dispositivos móviles*/
+}
+.nav__img{
+    display: block;
+    width: 1.875rem;
+}
+
+.nav__close{
+    display: var(--show, none); /*aqui se muetra una variable */
+}
+
+/*HERO CONTAINER el que esta en la section*/
+
+.hero__container{
+    max-width: 50rem;
+    --padding-container: 0;
+    display: grid;
+    grid-auto-rows: max-content;
+    align-content: center;
+    gap: 1em;
+    padding-bottom: 6.25rem;
+    text-align: center;
+}
+
+.hero__title{
+    font-size: 2.5rem;
+}
+
+.hero__paragraph{
+    margin-bottom: 1.25rem;
+}
+
+.cta{
+    display: inline-block;
+    background-color: #45e;
+    justify-self: center ;
+    text-decoration: none;
+    color: #fff;
+    padding: 13px 30px;
+    border-radius: 1.25rem;
+    
+}
