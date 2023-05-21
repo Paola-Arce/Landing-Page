@@ -43,7 +43,7 @@ body{
 
 .nav{
     --padding-container:0; /*esto hace que solamente el root lo contenga el header y nav*/
-    height: 6.25rem;
+    height: 100%;
     display: flex;
     align-items: center;
 }
@@ -114,5 +114,74 @@ body{
     color: #fff;
     padding: 13px 30px;
     border-radius: 1.25rem;
-    
+    margin-top: 15px;
+}
+
+/*About*/
+.about{
+    text-align: center;
+}
+
+.subtitle{
+    color:var(--color-title);
+    font-size: 2rem;
+    margin-bottom: .3125rem;
+}
+
+.about__paragraph{
+    line-height: 1.7;
+}
+
+.about__main{
+    padding-top: 5rem;
+    display: grid;
+    width: 90%;
+    margin: 0 auto;
+    gap: 1em;
+    overflow: hidden;
+    grid-template-columns: repeat(auto-fit, minmax(16.25rem, auto)); /*aqui se crean columnas dinamicas se repetiran tantas columnas como sea necesaria y además no es necesario media query*/
+}
+
+.about__icons{
+    display: grid;
+    gap: 1em; /*espaciado en cada elemento*/
+    justify-items: center;
+    width: 16.25rem;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.about__icon{
+    width: 2.5rem;
+}
+
+/*KNOWLEDGE*/
+
+.knowledge{
+    background-color: #e5e5f7;
+    background-image:  radial-gradient(#444cf7 0.5px, transparent 0.5px), radial-gradient(#444cf7 0.5px, #e5e5f7 0.5px);
+    background-size: 20px 20px;
+    background-position: 0 0,10px 10px;
+    overflow: hidden;
+}
+
+.knowledge__container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:1em;
+    align-items: center;
+}
+
+.knowledge__picture{
+    max-width: 31.25rem;
+}
+
+.knowledge_paragraph{
+    line-height: 1.8;
+    margin-bottom: 1.5625rem;
+}
+
+.knowledge__img{
+    width: 100%;
+    display: block;
 }
