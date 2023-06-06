@@ -125,7 +125,7 @@ body{
 .subtitle{
     color:var(--color-title);
     font-size: 2rem;
-    margin-bottom: .3125rem;
+    margin-bottom: 1.5625rem;
 }
 
 .about__paragraph{
@@ -178,10 +178,38 @@ body{
 
 .knowledge_paragraph{
     line-height: 1.8;
-    margin-bottom: 1.5625rem;
+    margin-bottom: 15px;
 }
 
 .knowledge__img{
     width: 100%;
     display: block;
+}
+
+/*Price*/
+
+.price{
+    text-align: center;
+}
+
+.price__table{
+    padding-top: 3.75rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5em;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.price__element{
+    background-color: #e5e5f7;
+    text-align: center;
+    border-radius:10px;
+    width: 13.75rem;
+    padding: 2.5rem;
+    --color-plan: #696871;
+    --color-price: #1d293f;
+    --bg-cta:#ffff;
+    --color-cta:#5454d4;
+    --color-items:#695871;
 }
