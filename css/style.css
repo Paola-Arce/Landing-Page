@@ -125,7 +125,8 @@ body{
 .subtitle{
     color:var(--color-title);
     font-size: 2rem;
-    margin-bottom: 1.5625rem;
+    margin-bottom: 25px;
+    margin-top: 15px;
 }
 
 .about__paragraph{
@@ -212,4 +213,47 @@ body{
     --bg-cta:#ffff;
     --color-cta:#5454d4;
     --color-items:#695871;
+}
+
+.price__name{
+    color:var(--color-plan);
+    margin-bottom: 15px;
+    font-weight: 300;
+}
+
+.price__element--best{
+    width: 300px;
+    padding: 60px 40px;
+    background-color: #e2653b;
+    --color-plan: rgb(255 255 255 / 75%);/*nueva forma de declarar los rgb junto con los alfa*/  
+    --color-price:#fff ;
+    --bg-cta:#c2421b;
+    --color-cta:#fff;
+    --color-items:#fff;
+}
+
+.price__price{
+    font-size: 2rem;
+    color:var(--color-plan)
+}
+
+.price__items{
+    margin-top: 35px;
+    display: grid;
+    gap:1em;
+    font-weight: 300;
+    font-size: 1em;
+    margin-bottom: 50px;
+    color:var(--color-items)
+}
+
+.price__cta{
+    display: block; /*ocupara todo el ancho*/
+    padding: 20px 0;
+    border-radius: 10px;
+    text-decoration: none;
+    background-color: var(--bg-cta);
+    font-weight: 600;
+    color: var(--color-cta);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
 }
