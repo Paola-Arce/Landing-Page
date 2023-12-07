@@ -6,14 +6,17 @@
     let value;
 
     buttonNext.addEventListener('click', () =>{
+
         changePosition(1);
     });
 
     buttonBefore.addEventListener('click', () =>{
+
         changePosition(-1);
     });
 
     const changePosition = (add)=>{
+
         const currentTestimony = document.querySelector('.testimony__body--show').dataset.id;
         value = Number(currentTestimony);
         value += add;
@@ -26,6 +29,5 @@
         sliders[value-1].classList.add('testimony__body--show');
 
     }
-
 
 })();
